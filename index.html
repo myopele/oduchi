@@ -1,0 +1,955 @@
+Below is a complete SGI-style HTML course page for:
+
+Odu Ara: The 16 Sacred Body Postures
+using the updated Odu meanings you provided.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Odu Ara: The 16 Sacred Body Postures | SGI Course</title>
+
+  <meta name="description" content="SGI-styled 16-module sacred movement course based on the 16 Odu, body postures, breath, divination, and spiritual alignment." />
+
+  <style>
+    :root{
+      --bg:#07070b;
+      --bg2:#10101a;
+      --panel:#141421;
+      --panel2:#1c1c2d;
+      --glass:rgba(255,255,255,.055);
+      --text:#f5f1df;
+      --muted:#c9c0a8;
+      --gold:#d4af37;
+      --gold2:#f0d67a;
+      --red:#b44b4b;
+      --blue:#7da7ff;
+      --green:#8fd19e;
+      --purple:#b998ff;
+      --line:rgba(212,175,55,.28);
+      --shadow:0 18px 55px rgba(0,0,0,.45);
+      --radius:24px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,.14), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(125,167,255,.10), transparent 35%),
+        linear-gradient(135deg,var(--bg),var(--bg2));
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:24px;
+    }
+
+    header{
+      position:relative;
+      padding:28px 0 16px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .logo-link{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .logo-link img{
+      width:54px;
+      height:54px;
+      object-fit:contain;
+      border-radius:50%;
+      filter:drop-shadow(0 0 12px rgba(212,175,55,.35));
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
+    }
+
+    .brand-text strong{
+      color:var(--gold2);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.86rem;
+    }
+
+    .brand-text span{
+      color:var(--muted);
+      font-size:.82rem;
+    }
+
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:10px 14px;
+      background:rgba(255,255,255,.045);
+      color:var(--text);
+      font-size:.92rem;
+      transition:.2s ease;
+    }
+
+    .pill:hover{
+      background:rgba(212,175,55,.13);
+      transform:translateY(-2px);
+    }
+
+    .hero{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:38px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.025)),
+        radial-gradient(circle at top right, rgba(212,175,55,.16), transparent 38%);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(212,175,55,.10), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(125,167,255,.09), transparent 34%);
+      pointer-events:none;
+    }
+
+    .hero > *{
+      position:relative;
+      z-index:1;
+    }
+
+    .eyebrow{
+      color:var(--gold2);
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.82rem;
+      margin-bottom:12px;
+    }
+
+    h1{
+      margin:0 0 12px;
+      font-size:clamp(2.1rem, 5vw, 4.2rem);
+      line-height:1.05;
+      color:var(--gold2);
+      text-shadow:0 0 22px rgba(212,175,55,.18);
+    }
+
+    .subtitle{
+      font-size:clamp(1.05rem, 2.3vw, 1.35rem);
+      color:var(--muted);
+      max-width:860px;
+      margin:0 0 26px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .stat{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      background:rgba(0,0,0,.22);
+    }
+
+    .stat b{
+      display:block;
+      color:var(--gold2);
+      font-size:1.2rem;
+      margin-bottom:4px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    section{
+      margin:34px 0;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+    }
+
+    .section-title h2{
+      margin:0;
+      font-size:clamp(1.6rem, 3vw, 2.35rem);
+      color:var(--gold2);
+    }
+
+    .mark{
+      width:42px;
+      height:42px;
+      border:1px solid var(--line);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      color:var(--gold2);
+      background:rgba(255,255,255,.04);
+      flex:0 0 auto;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      background:linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.025));
+      box-shadow:var(--shadow);
+    }
+
+    .portal-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+    }
+
+    .portal{
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:16px;
+      background:rgba(255,255,255,.04);
+      min-height:112px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      transition:.2s ease;
+    }
+
+    .portal:hover{
+      transform:translateY(-3px);
+      background:rgba(212,175,55,.10);
+    }
+
+    .portal strong{
+      color:var(--gold2);
+      font-size:1rem;
+    }
+
+    .portal span{
+      color:var(--muted);
+      font-size:.84rem;
+    }
+
+    .family-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+    }
+
+    .family{
+      border-radius:22px;
+      padding:18px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.22);
+    }
+
+    .family h3{
+      margin:0 0 8px;
+      color:var(--gold2);
+    }
+
+    .family p{
+      margin:0;
+      color:var(--muted);
+      font-size:.93rem;
+    }
+
+    .modules{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .module{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025)),
+        radial-gradient(circle at top right, rgba(212,175,55,.10), transparent 40%);
+      box-shadow:var(--shadow);
+    }
+
+    .module::after{
+      content:attr(data-family);
+      position:absolute;
+      top:14px;
+      right:16px;
+      font-size:.72rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:rgba(240,214,122,.54);
+      border:1px solid rgba(212,175,55,.22);
+      padding:5px 9px;
+      border-radius:999px;
+      background:rgba(0,0,0,.22);
+    }
+
+    .num{
+      width:42px;
+      height:42px;
+      border:1px solid var(--line);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      color:var(--gold2);
+      background:rgba(0,0,0,.28);
+      margin-bottom:12px;
+      font-weight:bold;
+    }
+
+    .module h3{
+      margin:0 0 6px;
+      color:var(--gold2);
+      font-size:1.55rem;
+      line-height:1.15;
+      padding-right:100px;
+    }
+
+    .odu-name{
+      color:var(--text);
+      font-style:italic;
+      margin-bottom:12px;
+      display:block;
+    }
+
+    .meaning{
+      border-left:3px solid var(--gold);
+      padding-left:14px;
+      margin:14px 0;
+      color:var(--text);
+      font-size:1.02rem;
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .mini{
+      border:1px solid rgba(212,175,55,.20);
+      border-radius:18px;
+      padding:14px;
+      background:rgba(0,0,0,.18);
+    }
+
+    .mini b{
+      display:block;
+      color:var(--gold2);
+      margin-bottom:4px;
+      font-size:.95rem;
+    }
+
+    .mini span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .affirm{
+      margin-top:16px;
+      padding:15px;
+      border-radius:18px;
+      border:1px solid rgba(212,175,55,.24);
+      background:rgba(212,175,55,.08);
+      color:var(--text);
+      font-style:italic;
+    }
+
+    .lesson-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+
+    .lesson{
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .lesson b{
+      color:var(--gold2);
+      display:block;
+      margin-bottom:8px;
+    }
+
+    .lesson p{
+      margin:0;
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
+    .chant{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .chant div{
+      border:1px solid rgba(212,175,55,.22);
+      border-radius:999px;
+      padding:10px 12px;
+      background:rgba(0,0,0,.20);
+      color:var(--muted);
+      text-align:center;
+      font-size:.93rem;
+    }
+
+    footer{
+      margin:42px 0 16px;
+      border-top:1px solid var(--line);
+      padding-top:24px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .gold{
+      color:var(--gold2);
+    }
+
+    @media(max-width:980px){
+      .hero-grid,
+      .family-grid,
+      .portal-grid,
+      .lesson-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .modules{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:620px){
+      .wrap{
+        padding:16px;
+      }
+
+      .hero{
+        padding:26px 20px;
+      }
+
+      .hero-grid,
+      .family-grid,
+      .portal-grid,
+      .lesson-grid,
+      .mini-grid,
+      .chant{
+        grid-template-columns:1fr;
+      }
+
+      .module h3{
+        padding-right:0;
+      }
+
+      .module::after{
+        position:static;
+        display:inline-block;
+        margin-bottom:10px;
+      }
+
+      .nav{
+        justify-content:flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header>
+      <div class="topbar">
+        <a class="logo-link" href="https://swamiginstitute.com" target="_blank" rel="noopener">
+          <img src="https://swamiginstitute.com/swamig.gif" alt="SwamiG Institute Logo">
+          <span class="brand-text">
+            <strong>SwamiG Institute</strong>
+            <span>Radical Devotion • Words of Power • Infinite Wisdom</span>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <a class="pill" href="#overview">Overview</a>
+          <a class="pill" href="#families">5 Families</a>
+          <a class="pill" href="#modules">16 Modules</a>
+          <a class="pill" href="#practice">Practice Format</a>
+          <a class="pill" href="#chant">Chant</a>
+        </nav>
+      </div>
+
+      <div class="hero">
+        <div class="eyebrow">SGI Sacred Movement Course</div>
+        <h1>Odu Ara</h1>
+        <p class="subtitle">
+          <strong>The 16 Sacred Body Postures</strong> is an SGI-styled course that transforms the 16 Odu into posture, breath, movement, divination reflection, and spiritual discipline.
+        </p>
+
+        <div class="hero-grid">
+          <div class="stat">
+            <b>16 Modules</b>
+            <span>One sacred posture for each major Odu.</span>
+          </div>
+          <div class="stat">
+            <b>5 Odu Families</b>
+            <span>Alafia, Etawa, Ejife, Okana, and Oyeku.</span>
+          </div>
+          <div class="stat">
+            <b>1 Living Oracle</b>
+            <span>The body becomes a sacred text in motion.</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="overview">
+      <div class="section-title">
+        <div class="mark">✦</div>
+        <h2>Course Premise</h2>
+      </div>
+
+      <p>
+        <strong class="gold">Odu Ara</strong> means the body becomes the living expression of Odu.
+        Each Odu is trained as a posture, breath pattern, movement principle, spiritual discipline, and divination reflection.
+      </p>
+
+      <p>
+        The student does not only study Odu. The student learns to stand inside the meaning of Odu.
+        The body becomes a divination tray. The breath becomes the offering. The posture becomes the Odu.
+        The movement becomes the prayer.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div class="mark">☉</div>
+        <h2>SGI Portal Links</h2>
+      </div>
+
+      <div class="portal-grid">
+        <a class="portal" href="https://4cowrieshell.com/index0" target="_blank" rel="noopener">
+          <strong>4 Cowrie Shell</strong>
+          <span>Divination foundation</span>
+        </a>
+
+        <a class="portal" href="https://16cowrie.com" target="_blank" rel="noopener">
+          <strong>16 Cowrie</strong>
+          <span>Odu study portal</span>
+        </a>
+
+        <a class="portal" href="https://myopele.com" target="_blank" rel="noopener">
+          <strong>My Opele</strong>
+          <span>Ifá divination tools</span>
+        </a>
+
+        <a class="portal" href="https://iamiyawo.com" target="_blank" rel="noopener">
+          <strong>I Am Iyawo</strong>
+          <span>Iyawo training path</span>
+        </a>
+
+        <a class="portal" href="https://iamaborisha.com" target="_blank" rel="noopener">
+          <strong>I Am Aborisha</strong>
+          <span>Orisha learning path</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="families">
+      <div class="section-title">
+        <div class="mark">◇</div>
+        <h2>The 5 Odu Families</h2>
+      </div>
+
+      <div class="family-grid">
+        <div class="family">
+          <h3>Alafia</h3>
+          <p><strong>Ogbe</strong><br>Uplift, support, elevation, divine opening.</p>
+        </div>
+
+        <div class="family">
+          <h3>Etawa</h3>
+          <p><strong>Ogunda, Osa, Otura, Irete</strong><br>Correction, seasons, uncovering, blessing.</p>
+        </div>
+
+        <div class="family">
+          <h3>Ejife</h3>
+          <p><strong>Iwori, Edi, Irosun, Oworin, Oshe, Ofun</strong><br>Ori, stillness, thought, flow, fulfillment, enlightenment.</p>
+        </div>
+
+        <div class="family">
+          <h3>Okana</h3>
+          <p><strong>Obara, Okanran, Ika, Oturupon</strong><br>Body, heart, strategy, release.</p>
+        </div>
+
+        <div class="family">
+          <h3>Oyeku</h3>
+          <p><strong>Oyeku</strong><br>Descent, mystery, death, ancestors, hidden power.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="modules">
+      <div class="section-title">
+        <div class="mark">16</div>
+        <h2>The 16 SGI Modules</h2>
+      </div>
+
+      <div class="modules">
+
+        <article class="module" data-family="Alafia">
+          <div class="num">1</div>
+          <h3>Ogbe</h3>
+          <span class="odu-name">Posture of Uplifted Light</span>
+          <div class="meaning">The divine that uplifts, supports, and elevates.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Stand tall, chest open, spine lifted, palms receptive.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Let your posture raise the spirit before movement begins.</span></div>
+          </div>
+          <div class="affirm">“I am uplifted. I am supported. I rise in divine alignment.”</div>
+        </article>
+
+        <article class="module" data-family="Oyeku">
+          <div class="num">2</div>
+          <h3>Oyeku</h3>
+          <span class="odu-name">Posture of Sacred Descent</span>
+          <div class="meaning">The divine one associated with death, mystery, and the unseen.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Lower the body, fold inward, listen deeply.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Descent is not defeat; it is the doorway to hidden power.</span></div>
+          </div>
+          <div class="affirm">“I enter the mystery. I honor the unseen. I return renewed.”</div>
+        </article>
+
+        <article class="module" data-family="Ejife">
+          <div class="num">3</div>
+          <h3>Iwori</h3>
+          <span class="odu-name">Posture of Seeking Ori</span>
+          <div class="meaning">The divine one who searches for his head.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>One hand near the head, one near the heart, body centered.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Seek alignment with Ori before acting.</span></div>
+          </div>
+          <div class="affirm">“I seek my Ori. I align my head, heart, and destiny.”</div>
+        </article>
+
+        <article class="module" data-family="Ejife">
+          <div class="num">4</div>
+          <h3>Edi</h3>
+          <span class="odu-name">Posture of Still Reasoning</span>
+          <div class="meaning">Strives for stillness and deep reasoning.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Root the feet, steady the breath, quiet the hands.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Stillness allows wisdom to speak.</span></div>
+          </div>
+          <div class="affirm">“I become still. I reason deeply. I listen before I move.”</div>
+        </article>
+
+        <article class="module" data-family="Ejife">
+          <div class="num">5</div>
+          <h3>Irosun</h3>
+          <span class="odu-name">Posture of Steadfast Thought</span>
+          <div class="meaning">Holds steadfastly to thought.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Firm stance, stable core, unwavering gaze.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Discipline begins with the ability to hold the mind steady.</span></div>
+          </div>
+          <div class="affirm">“My thought is steady. My body is firm. My spirit does not scatter.”</div>
+        </article>
+
+        <article class="module" data-family="Ejife">
+          <div class="num">6</div>
+          <h3>Oworin</h3>
+          <span class="odu-name">Posture of the Walking Sun</span>
+          <div class="meaning">Sets as the sun when walking.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Move with rhythm, circularity, warmth, and controlled descent.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Walk with radiant purpose and graceful transition.</span></div>
+          </div>
+          <div class="affirm">“I walk with the sun. I move with rhythm, warmth, and purpose.”</div>
+        </article>
+
+        <article class="module" data-family="Okana">
+          <div class="num">7</div>
+          <h3>Obara</h3>
+          <span class="odu-name">Posture of Bodily Dominion</span>
+          <div class="meaning">Governs the body.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Upright torso, disciplined limbs, embodied command.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Govern the body before attempting to govern the world.</span></div>
+          </div>
+          <div class="affirm">“I govern my body. I command my movement. I stand in discipline.”</div>
+        </article>
+
+        <article class="module" data-family="Okana">
+          <div class="num">8</div>
+          <h3>Okanran</h3>
+          <span class="odu-name">Posture of the Ignited Heart</span>
+          <div class="meaning">Ignites the hearts of hearts.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Open the chest, awaken inner fire, project presence.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Let sacred fire awaken courage, truth, and conviction.</span></div>
+          </div>
+          <div class="affirm">“My heart is ignited. My courage is awake. My truth has fire.”</div>
+        </article>
+
+        <article class="module" data-family="Etawa">
+          <div class="num">9</div>
+          <h3>Ogunda</h3>
+          <span class="odu-name">Posture of Sacred Suppression</span>
+          <div class="meaning">The divine one suppressing evil.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Angled stance, cutting arms, focused forward intention.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Clear obstruction with discipline and righteous force.</span></div>
+          </div>
+          <div class="affirm">“I suppress evil. I cut through obstruction. I clear the path.”</div>
+        </article>
+
+        <article class="module" data-family="Etawa">
+          <div class="num">10</div>
+          <h3>Osa</h3>
+          <span class="odu-name">Posture of Seasonal Turning</span>
+          <div class="meaning">Who brings about seasons.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Spiral, turn, shift, and adapt.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Change is sacred when it follows divine timing.</span></div>
+          </div>
+          <div class="affirm">“I turn with the season. I change with wisdom. I move in time.”</div>
+        </article>
+
+        <article class="module" data-family="Okana">
+          <div class="num">11</div>
+          <h3>Ika</h3>
+          <span class="odu-name">Posture of Sudden Reflection</span>
+          <div class="meaning">Moves quickly by way of trickery and reflection.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Coiled body, alert eyes, guarded hands, sudden release.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Be watchful, strategic, and disciplined with hidden force.</span></div>
+          </div>
+          <div class="affirm">“I move with strategy. I reflect before release. My force is governed.”</div>
+        </article>
+
+        <article class="module" data-family="Okana">
+          <div class="num">12</div>
+          <h3>Oturupon</h3>
+          <span class="odu-name">Posture of Released Force</span>
+          <div class="meaning">Who releases.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Drop the weight, loosen the joints, release tension through the ground.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>What is bound must be released with wisdom.</span></div>
+          </div>
+          <div class="affirm">“I release what is bound. I loosen what is tense. I return to flow.”</div>
+        </article>
+
+        <article class="module" data-family="Etawa">
+          <div class="num">13</div>
+          <h3>Otura</h3>
+          <span class="odu-name">Posture of Uncovering Depth</span>
+          <div class="meaning">Who digs up or uncovers pits.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Lower awareness, searching hands, investigative movement.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Reveal what is hidden before stepping forward.</span></div>
+          </div>
+          <div class="affirm">“I uncover what is hidden. I see the pit before I step.”</div>
+        </article>
+
+        <article class="module" data-family="Etawa">
+          <div class="num">14</div>
+          <h3>Irete</h3>
+          <span class="odu-name">Posture of Spread Blessing</span>
+          <div class="meaning">Who spreads blessing and comfortable goodness.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Broad stance, open arms, outward-moving hands.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Alignment should distribute blessing into the world.</span></div>
+          </div>
+          <div class="affirm">“I spread blessing. I offer goodness. I make comfort visible.”</div>
+        </article>
+
+        <article class="module" data-family="Ejife">
+          <div class="num">15</div>
+          <h3>Oshe</h3>
+          <span class="odu-name">Posture of Fulfilled Accomplishment</span>
+          <div class="meaning">Brings about accomplishments and fulfillments.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Balanced finish, steady breath, graceful completion.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Fulfillment comes when movement, intention, and discipline agree.</span></div>
+          </div>
+          <div class="affirm">“I accomplish. I fulfill. I complete with grace.”</div>
+        </article>
+
+        <article class="module" data-family="Ejife">
+          <div class="num">16</div>
+          <h3>Ofun</h3>
+          <span class="odu-name">Posture of Enlightened Completion</span>
+          <div class="meaning">The one who is enlightened.</div>
+          <div class="mini-grid">
+            <div class="mini"><b>Body Principle</b><span>Expanded body, lifted head, purified presence.</span></div>
+            <div class="mini"><b>Training Lesson</b><span>Enlightenment is embodied clarity.</span></div>
+          </div>
+          <div class="affirm">“I am enlightened. I am clear. I complete the circle in wisdom.”</div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="card" id="practice">
+      <div class="section-title">
+        <div class="mark">✺</div>
+        <h2>Weekly Practice Format</h2>
+      </div>
+
+      <div class="lesson-grid">
+        <div class="lesson">
+          <b>1. Opening</b>
+          <p>Ground the body, acknowledge Ori, ancestors, and divine wisdom.</p>
+        </div>
+
+        <div class="lesson">
+          <b>2. Odu Meaning</b>
+          <p>Study the meaning of the Odu and speak its posture name aloud.</p>
+        </div>
+
+        <div class="lesson">
+          <b>3. Body Posture</b>
+          <p>Enter the posture slowly with breath, alignment, and awareness.</p>
+        </div>
+
+        <div class="lesson">
+          <b>4. Movement Drill</b>
+          <p>Allow the posture to become stepping, turning, guarding, releasing, or opening.</p>
+        </div>
+
+        <div class="lesson">
+          <b>5. Breath Pattern</b>
+          <p>Inhale to receive, pause to listen, exhale to express, return to center.</p>
+        </div>
+
+        <div class="lesson">
+          <b>6. Divination Reflection</b>
+          <p>Ask: What is this Odu teaching my body today?</p>
+        </div>
+
+        <div class="lesson">
+          <b>7. Journal</b>
+          <p>Record physical sensation, emotional response, spiritual insight, and life application.</p>
+        </div>
+
+        <div class="lesson">
+          <b>8. Closing</b>
+          <p>Close with the affirmation and return to stillness.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="chant">
+      <div class="section-title">
+        <div class="mark">☾</div>
+        <h2>Odu Ara Chant Form</h2>
+      </div>
+
+      <p>
+        This short chant may be used at the beginning or end of class to remember the living action of each Odu.
+      </p>
+
+      <div class="chant">
+        <div>Ogbe uplifts</div>
+        <div>Oyeku descends</div>
+        <div>Iwori seeks Ori</div>
+        <div>Edi reasons in stillness</div>
+        <div>Irosun holds thought</div>
+        <div>Oworin walks like the sun</div>
+        <div>Obara governs the body</div>
+        <div>Okanran ignites the heart</div>
+        <div>Ogunda suppresses evil</div>
+        <div>Osa turns the seasons</div>
+        <div>Ika moves through strategy</div>
+        <div>Oturupon releases</div>
+        <div>Otura uncovers depth</div>
+        <div>Irete spreads blessing</div>
+        <div>Oshe fulfills</div>
+        <div>Ofun enlightens</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <div class="mark">SGI</div>
+        <h2>Closing Course Statement</h2>
+      </div>
+
+      <p>
+        <strong class="gold">Odu Ara: The 16 Sacred Body Postures</strong> teaches that divination is not only read with the eyes or interpreted with the mind.
+        It can also be embodied through posture, breath, discipline, movement, and sacred reflection.
+      </p>
+
+      <p>
+        The initiate learns to stand in Odu, move through Odu, breathe with Odu, and live as a conscious vessel of divine alignment.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        © SwamiG Institute — Odu Ara: The 16 Sacred Body Postures
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
